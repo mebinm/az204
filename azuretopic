@@ -1,0 +1,16 @@
+az eventgrid topic create --name $myTopicName \
+> --location $myLocation \
+> --resource-group java-training-rg
+
+
+az deployment group create \
+> --resource-group java-training-rg \
+> --template-uri "https://raw.githubusercontent.com/Azure-Samples/azure-event-grid-viewer/main/azuredeploy.json" \
+> --parameters siteName=$mySiteName hostingPlanName=viewerhost
+
+"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+
+event='[{"id":"'"$RANDOM"'","eventType":"recordInserted","subject":"myapp/vehicles/motorcycles","data":{"make":"Enfield","model":"350cc"},"eventTime":"'"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"'","dataVersion":"1.0"}]'
+ 

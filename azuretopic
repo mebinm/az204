@@ -13,4 +13,7 @@ az deployment group create \
 "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
 event='[{"id":"'"$RANDOM"'","eventType":"recordInserted","subject":"myapp/vehicles/motorcycles","data":{"make":"Enfield","model":"350cc"},"eventTime":"'"$(date -u +"%Y-%m-%dT%H:%M:%SZ")"'","dataVersion":"1.0"}]'
- 
+
+
+
+https://learn.microsoft.com/en-us/azure/stream-analytics/stream-analytics-real-time-fraud-detection?toc=%2Fazure%2Fevent-hubs%2FTOC.json
